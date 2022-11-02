@@ -1,17 +1,10 @@
 package com.illia.lr2
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
 import com.illia.lr2.databinding.ActivityResultBinding
-import org.w3c.dom.Text
 
 class ResultActivity : AppCompatActivity() {
 
@@ -29,9 +22,11 @@ class ResultActivity : AppCompatActivity() {
         val result = intent.getIntExtra("resultValue", 0)
         println(result)
 
-        val resultTextView = findViewById<TextView>(R.id.ResultTextView)
+//        val resultTextView = findViewById<TextView>(R.id.ResultTextView)
+//        resultTextView.setText(result.toString())
 
-        resultTextView.setText(result.toString())
+        val rtv = binding.ResultTextView
+        rtv.setText(result.toString())
 
     }
 

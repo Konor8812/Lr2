@@ -24,8 +24,6 @@ class MainActivity : AppCompatActivity() {
         println("creating new main activity")
         super.onCreate(savedInstanceState)
 
-//        setContentView(R.layout.activity_main)
-
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
@@ -37,9 +35,13 @@ class MainActivity : AppCompatActivity() {
     fun getResultOnTap(v : View){
         findViewById<TextView>(R.id.InvalidDataTextView).setText("")
 
-        val num1Value = findViewById<EditText>(R.id.num1).text
-        val num2Value = findViewById<EditText>(R.id.num2).text
-        val operation = findViewById<EditText>(R.id.operation).text
+//        val num1Value = findViewById<EditText>(R.id.num1).text
+//        val num2Value = findViewById<EditText>(R.id.num2).text
+//        val operation = findViewById<EditText>(R.id.operation).text
+
+        val num1Value = binding.num1.text
+        val num2Value = binding.num2.text
+        val operation = binding.operation.text
 
         if(num1Value.matches("-?\\d{1,5}".toRegex()) &&
             num2Value.matches("-?\\d{1,5}".toRegex()) &&
