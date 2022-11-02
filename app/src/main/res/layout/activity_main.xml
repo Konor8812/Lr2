@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="?attr/actionBarSize">
+
+    <EditText
+        android:id="@+id/num1"
+        android:layout_width="110dp"
+        android:layout_height="90dp"
+        android:background="@color/teal_200"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.072" />
+
+    <EditText
+        android:id="@+id/num2"
+        android:layout_width="110dp"
+        android:layout_height="90dp"
+        android:background="@color/teal_200"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.947"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.073" />
+
+    <EditText
+        android:id="@+id/operation"
+        android:layout_width="110dp"
+        android:layout_height="90dp"
+        android:background="#B1FBF4"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.073" />
+
+    <TextView
+        android:id="@+id/InvalidDataTextView"
+        android:layout_width="370dp"
+        android:layout_height="109dp"
+        android:textSize="30sp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/getResult"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/operation" />
+
+    <Button
+        android:id="@+id/getResult"
+        android:layout_width="365dp"
+        android:layout_height="224dp"
+        android:text="@string/get_result"
+        android:onClick="getResultOnTap"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/operation" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
